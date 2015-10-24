@@ -7,5 +7,7 @@ import javafx.scene.text.Text;
 
 
 public class ClockPane extends Pane {
-
+	private int hour;
+	private int minute;
+	private int second;
 }

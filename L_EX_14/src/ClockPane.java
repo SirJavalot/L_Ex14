@@ -1,8 +1,6 @@
 import javafx.scene.layout.Pane;
-
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -116,9 +114,31 @@ public class ClockPane extends Pane {
 		
 		Line sLine = new Line(centerX,centerY,secondX,secondY);
 		sLine.setStroke(Color.RED);
+		double mLength = clockRadius* 0.65;
+		double xMinute = centerX + mLength*Math.sin(minute * (2*Math.PI/60));
+		double minuteY = centerY - mLength*Math.cos(minute * (2*Math.PI/60));
+		Line mLine = new Line(centerX, centerY, xMinute, minuteY);
+		mLine.setStroke(Color.BLUE);
 		
+		//draw hour hand
 		
-				
+		double hLength = clockRadius* 0.5;
+		double hourX = centerX + hLength* Math.sin((hour%12+minute/60)* (2*Math.PI/12));
+		double hourY = centerY - hLength* Math.cos((hour%12+minute/60)* (2*Math.PI/12));
+		Line hLine = new Line(centerX, centerY, hourX, hourY);
+		hLine.setStroke(Color.GREEN);
+		
+		getChildren().clear();
+		getChildren().addAll(circle,t1,t2,t3,t4,sLine,mLine,hLine);
+	}
+
+
+
+	public ClockPane(int hour, int minute, int second) {
+		this.hour = hour;
+		this.minute = minute;
+		this.second = second;
+		paintClock();
 	}
 	
 }

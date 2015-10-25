@@ -20,7 +20,8 @@ public class FlagPane extends Application {
 		pane.setPrefSize(200, 200);
 		pane.setAlignment(Pos.CENTER);
 		
-		
+		imgDen.fitHeightProperty().bind(pane.heightProperty().divide(2));
+		imgDen.fitWidthProperty().bind(pane.widthProperty().divide(2));
 		Scene scene = new Scene(pane, 300, 300);
 		primaryStage.setTitle("display flag");
 		primaryStage.setScene(scene);

@@ -28,7 +28,7 @@ public class E141 extends Application {
 		
 		
 		
-		Scene scene = new Scene(pane, 250, 250);
+		Scene scene = new Scene(pane, 300, 300);
 		primaryStage.setTitle("display clock");
 		primaryStage.setScene(scene);
 		primaryStage.show();

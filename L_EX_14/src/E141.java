@@ -19,10 +19,10 @@ public class E141 extends Application {
 		pane.setPadding(new Insets(10, 10, 10, 10));
 		pane.setVgap(10);
 		pane.setHgap(10);
-		Image mi1 = new Image("file:C:\\Users\\dennis\\Desktop\\java\\LiangBookCode\\book\\image\\denmark.gif");
-		Image mi2 = new Image("file:C:\\Users\\dennis\\Desktop\\java\\LiangBookCode\\book\\image\\china.gif");
-		Image mi3 = new Image("file:C:\\Users\\dennis\\Desktop\\java\\LiangBookCode\\book\\image\\india.gif");
-		Image mi4 = new Image("file:C:\\Users\\dennis\\Desktop\\java\\LiangBookCode\\book\\image\\us.gif");
+		Image mi1 = new Image("file:D:\\book\\image\\denmark.gif");
+		Image mi2 = new Image("file:D:\\book\\image\\china.gif");
+		Image mi3 = new Image("file:D:\\book\\image\\india.gif");
+		Image mi4 = new Image("file:D:\\book\\image\\us.gif");
 		ImageView vmi1 = new ImageView(mi1);
 		ImageView vmi2 = new ImageView(mi2);
 		ImageView vmi3 = new ImageView(mi3);
@@ -39,6 +39,8 @@ public class E141 extends Application {
 			pane.widthProperty().addListener(ov -> imageView.setFitWidth(pane.getWidth()/4)); 
 			pane.widthProperty().addListener(ov -> imageView.setFitHeight(pane.getHeight()/4));
 		}
+		
+		
 		
 //		pane.widthProperty().addListener(ov -> vmi1.setFitWidth(pane.getWidth()/4)); 
 //		pane.widthProperty().addListener(ov -> vmi1.setFitHeight(pane.getHeight()/4));

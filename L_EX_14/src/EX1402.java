@@ -19,7 +19,6 @@ public class EX1402 extends Application {
 		pane.setHgap(5);
 		
 		int[] pos = {0,1,0,1,2,1,1,2,2};
-		
 		for(int i=0, k=0;i<3;i++){
 			for(int j=0;j<3;j++,k++){
 				if(pos[k]==0){
